@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 94 3% 97%;
+    --foreground: 20 5% 12%;
+    --card: 94 3% 99%;
+    --card-foreground: 20 5% 12%;
+    --popover: 94 3% 99%;
+    --popover-foreground: 20 5% 12%;
+    --primary: 20 5% 12%;
+    --primary-foreground: 94 3% 97%;
+    --secondary: 35 15% 92%;
+    --secondary-foreground: 20 5% 20%;
+    --muted: 35 10% 94%;
+    --muted-foreground: 20 5% 45%;
+    --accent: 15 25% 85%;
+    --accent-foreground: 20 5% 12%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 10% 88%;
+    --input: 35 10% 88%;
+    --ring: 20 5% 12%;
+    --radius: 0.25rem;
+
+    --color-background: oklch(97% 0.005 94);
+    --color-foreground: oklch(12% 0.01 20);
+    --color-primary: oklch(12% 0.01 20);
+    --color-primary-fg: oklch(97% 0.005 94);
+    --color-muted: oklch(93% 0.008 35);
+    --color-muted-fg: oklch(50% 0.01 20);
+    --color-accent: oklch(85% 0.025 15);
+    --color-border: oklch(88% 0.01 35);
+    --color-card: oklch(99% 0.003 94);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
